@@ -8,7 +8,7 @@ Run command on terminal php artisan migrate
 Download Postman software https://www.getpostman.com/apps
 ```
 
-## You can also write code in your own project using follwing instructions
+## You can also write code in your own project using following instructions
 ```
 In routes/api.php
 Route::post('posts', 'APIController@getAllPosts');
