@@ -97,12 +97,12 @@ class Post extends Model
 Run command on terminal php artisan migrate
 ```
 
-```
-Create Post
-```
+
+## Create Post
+
 <img src="https://github.com/vermaboys/create-rest-api-in-laravel/blob/master/public/images/create_post.png">
 
-```
-Get All Posts
-```
+
+## Get All Posts
+
 <img src="https://github.com/vermaboys/create-rest-api-in-laravel/blob/master/public/images/get_posts.png">
