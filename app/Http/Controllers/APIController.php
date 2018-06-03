@@ -1,25 +1,3 @@
-# create-rest-api-in-laravel
-
-## You can get full project using git clone
-```
-Run command on terminal git clone https://github.com/vermaboys/create-rest-api-in-laravel.git
-Run command on terminal composer update
-Run command on terminal php artisan migrate
-Download Postman software https://www.getpostman.com/apps
-```
-
-## You can also write code in your own project
-```
-In routes/api.php
-Route::post('posts', 'APIController@getAllPosts');
-Route::post('create-post', 'APIController@createPost');
-```
-
-```
-Run command on terminal php artisan make:controller APIController
-
-Write code in app\Http\Controllers\APIController.php which is given below
-
 <?php
 
 namespace App\Http\Controllers;
@@ -54,7 +32,7 @@ class APIController extends Controller
     public function getAllPosts()
     {
         $posts = Post::all();
-        return  $this->sendResponse($posts->toArray(), 'Successfully retrieved .');
+        return  $this->sendResponse($posts->toArray(), 'Posts retrieved successfully.');
     }
     public function createPost(Request $request)
     {
@@ -69,30 +47,6 @@ class APIController extends Controller
     		$name=$request->name;
     		$description=$request->description;
         $posts = Post::create(['name'=>$name,'description'=>$description]);
-        return  $this->sendResponse(1, 'Successfully created.');
+        return  $this->sendResponse(1, 'Post successfully created.');
     }
 }
-
-```
-
-```
-Run command on terminal php artisan make:model Post
-
-
-<?php
-
-namespace App;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Post extends Model
-{
-
-	protected $table='posts';
-	protected $fillable = ['name', 'description'];
-}
-```
-
-```
-Run command on terminal php artisan migrate
-```
