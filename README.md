@@ -8,7 +8,7 @@ Run command on terminal php artisan migrate
 Download Postman software https://www.getpostman.com/apps
 ```
 
-## You can also write code in your own project
+## You can also write code in your own project using follwing instructions
 ```
 In routes/api.php
 Route::post('posts', 'APIController@getAllPosts');
@@ -78,6 +78,7 @@ class APIController extends Controller
 ```
 Run command on terminal php artisan make:model Post
 
+Write code in Post model which is given below
 
 <?php
 
